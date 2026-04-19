@@ -249,9 +249,9 @@ function validateUsername() {
     document.getElementById("username-error").innerHTML =
     "Username cannot be less than 5 characters";
     return false;
-  } else if (username.length > 30) {
+  } else if (username.length > 20) {
     document.getElementById("username-error").innerHTML =
-    "Username cannot exceed 30 characters";
+    "Username cannot exceed 20 characters";
     return false;
   } else {
     document.getElementById("username-error").innerHTML = "";

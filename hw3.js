@@ -44,8 +44,8 @@ function validateFname() {
 }
 
 //validating middle name
-function Mname() {
-    let name = document.getElementById("mname").value;
+function validateMname() {
+    let mname = document.getElementById("mname").value;
     const namePattern = /^[A-Z]$/;
     mname = mname.toUpperCase();
     document.getElementById("mname).value = mname;

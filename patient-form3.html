@@ -160,6 +160,7 @@ Description: This document creates a patient registration form.
             id="ssn"
             required
             title="Numbers only"
+            oninput= "formatSsn()"
             onblur= "validateSsn()"
             />
             <br>
@@ -334,7 +335,7 @@ Description: This document creates a patient registration form.
               onblur= "validatePhonenum()"
               />
               <br>
-              <span class="error" id="username-error"></span>
+              <span class="error" id="phonenum-error"></span>
             </td>
         </tr>
 
@@ -518,7 +519,7 @@ Description: This document creates a patient registration form.
         <tr>
           <td class="td1" colspan="4">
           <center>
-            <input type="submit" name="submit" id="submit" style="font-family: Helvetica, sans-serif, monospace;">
+            <input type="submit" name="submit" id="submit" disabled style="font-family: Helvetica, sans-serif, monospace;">
             &nbsp;&nbsp;&nbsp; <!--spaces-->
             <input type="reset" name="reset" id="reset" style="font-family: Helvetica, sans-serif, monospace;">
             &nbsp;&nbsp;&nbsp;

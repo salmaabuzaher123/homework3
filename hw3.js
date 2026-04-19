@@ -46,9 +46,13 @@ function validateFname() {
 //validating middle name
 function validateMname() {
     let mname = document.getElementById("mname").value;
+    if (mname === "") {
+    document.getElementById("mname-error").innerHTML = "";
+    return true;
+}
     const namePattern = /^[A-Z]$/;
     mname = mname.toUpperCase();
-    document.getElementById("mname).value = mname;
+    document.getElementById("mname").value = mname;
     if (!mname.match(namePattern)) {
         document.getElementById("mname-error").innerHTML = "Middle initial must be a single uppercase letter.";
         return false;
@@ -135,7 +139,7 @@ function validateZipcode() {
     let zip = zipInput.value.replace(/[^\d-]/g, "");
 
     if (!zip) {
-        document.getElementById("zcode-error").innerHTML = 
+        document.getElementById("zipcode-error").innerHTML = 
         "Zip code can't be blank";
         return false;
     }

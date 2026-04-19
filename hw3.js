@@ -171,6 +171,21 @@ function validateAddress1() {
   }
 }
 
+//validate address line 2
+function validateAddress2() {
+    const ad2 = document.getElementById("address2").value;
+    if (ad2 === "") return true; // optional field, blank is ok
+
+    if (ad2.length < 2 || ad2.length > 30) {
+        document.getElementById("address2-error").innerHTML =
+        "Address line 2 must be between 2 and 30 characters.";
+        return false;
+    } else {
+        document.getElementById("address2-error").innerHTML = "";
+        return true;
+    }
+}
+
 //validating city
 function validateCity() {
     city = document.getElementById("city").value.trim();
@@ -408,6 +423,9 @@ function validateEverything() {
     }
     if (!validateAddress1()) {
         valid = false;
+    }
+    if (!validateAddress2()) {
+    valid = false;
     }
     if (!validateCity()) {
         valid = false;

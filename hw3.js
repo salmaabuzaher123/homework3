@@ -119,6 +119,16 @@ function validateSsn() {
     }
 }
 
+function formatSsn() {
+    let ssn = document.getElementById("ssn").value.replace(/\D/g, ""); // strip non-digits
+    if (ssn.length > 3 && ssn.length <= 5) {
+        ssn = ssn.slice(0,3) + "-" + ssn.slice(3);
+    } else if (ssn.length > 5) {
+        ssn = ssn.slice(0,3) + "-" + ssn.slice(3,5) + "-" + ssn.slice(5,9);
+    }
+    document.getElementById("ssn").value = ssn;
+}
+
 //validating zip
 function validateZipcode() {
     const zipInput = document.getElementById("zipcode");

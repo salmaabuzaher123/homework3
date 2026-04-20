@@ -37,7 +37,7 @@ Description: This document creates a patient registration form.
     </header>
 <hr>
 <!-- Form starts here-->
-<form name="signup" id="signup" form action="thankyou.html">
+<form name="signup" id="signup" action="thankyou.html">
   <center>
     <div class="format">
       <table>
@@ -204,6 +204,8 @@ Description: This document creates a patient registration form.
             title="Please enter your address"
             onblur="validateAddress2()"
             />
+            <br>
+            <span class="error" id="address2-error"></span>
           </td>
         </tr>
 
